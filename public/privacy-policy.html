@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCryptsion - Privacy Policy</title>
+    <link rel="canonical" href="https://ncryptsion.vercel.app/privacy-policy">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="description" content="Privacy Policy for NCryptsion.">
+    <link rel="icon" type="image/png" sizes="500x500" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050a14;
+            --card-bg: rgba(16, 26, 48, 0.7);
+            --accent-blue: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.4);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --font-main: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 40%);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(10, 15, 30, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--accent-blue);
+        }
+
+        
+        .page-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 20px 60px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 4rem;
+        }
+
+        
+        main {
+            min-width: 0;
+            
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #fff 30%, var(--accent-blue) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 100px;
+            
+        }
+
+        .content-section h2 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .content-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .content-section ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        
+        aside {
+            position: relative;
+        }
+
+        .toc-container {
+            position: sticky;
+            top: 100px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .toc-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .toc-tree {
+            border-left: 1px solid var(--border-color);
+            padding-left: 2px;
+        }
+
+        .toc-item {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        
+        .toc-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 10px;
+            height: 1px;
+            background: var(--border-color);
+        }
+
+        .toc-link {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: block;
+            transition: all 0.2s;
+        }
+
+        .toc-link:hover,
+        .toc-link.active {
+            color: var(--accent-blue);
+            transform: translateX(2px);
+        }
+
+        @media (max-width: 900px) {
+            .page-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .toc-container {
+                display: none;
+                
+            }
+        }
+
+        
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#reviews">Reviews</a></li>
+            <li><a href="/#sponsors">Sponsors</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-wrapper">
+        <main>
+            <header>
+                <h1>Privacy Policy</h1>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Last updated: 2026-02-02</p>
+            </header>
+
+            <section id="introduction" class="content-section">
+                <h2>1. Introduction</h2>
+                <p>We respect your privacy and are committed to protecting your personal data.
+                    This privacy policy will inform you as to how we look after your personal data when you visit our
+                    website and tell you about your privacy rights and how the law protects you.</p>
+            </section>
+
+            <section id="information-collection" class="content-section">
+                <h2>2. Information Collection</h2>
+                <p>We do not collect any information from you nor use any analytics at all.</p>
+            </section>
+
+            <section id="cookies" class="content-section">
+                <h2>3. Cookies</h2>
+                <p>The website will never use cookies or employ any cookies that track your activity.</p>
+            </section>
+
+            <section id="contact" class="content-section">
+                <h2>4. Contact Us</h2>
+                <p>If you have any questions about this privacy policy or our privacy practices, please contact us via
+                    <a href="https://dsc.gg/ncryptsion" style="text-decoration: none;"><u>Discord</u></a> or <a
+                        href="email:ncryptsion@proton.me"><u>Email</u></a>.
+                </p>
+            </section>
+
+            <footer>
+                <p>&copy; 2026 NCryptsion. All rights reserved.</p>
+            </footer>
+        </main>
+
+        <aside>
+            <div class="toc-container">
+                <div class="toc-title">Table of Contents</div>
+                <div class="toc-tree">
+                    <div class="toc-item"><a href="#introduction" class="toc-link">1. Introduction</a></div>
+                    <div class="toc-item"><a href="#information-collection" class="toc-link">2. Information
+                            Collection</a></div>
+                    <div class="toc-item"><a href="#cookies" class="toc-link">3. Usage of Data</a></div>
+                    <div class="toc-item"><a href="#contact" class="toc-link">4. Contact Us</a></div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+
+</html>
