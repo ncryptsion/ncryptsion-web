@@ -164,6 +164,8 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             border: 1px solid rgba(59, 130, 246, 0.2);
+            display: inline-block;
+            margin-bottom: 0.8rem;
         }
 
         .profile-info h2 {
@@ -245,6 +247,12 @@
         }
 
         @media (max-width: 767px) {
+            .label {
+                    font-size: 0.7rem;
+                    padding: 0.3rem 0.8rem;
+                    margin-bottom: 0.5rem;
+                }
+
             .profile-img-container::after {
                 background: linear-gradient(to top, var(--card-bg) 0%, transparent 20%);
             }
@@ -616,7 +624,7 @@
         <section class="profile-card">
             <div class="profile-info">
                 <h2>NCryptsion</h2>
-                <p>18 Years-Old Developer Driven by Noble Principles with a Passion for Security & Privacy.</p>
+                <p>18 Years-Old Developer from the Philippines Driven by Noble Principles with a Passion for Security & Privacy.</p>
                 <div class="social-links">
                     <a href="https://github.com/ncryptsion" class="social-icon" aria-label="Github" target="_blank">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
