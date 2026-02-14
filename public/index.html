@@ -569,6 +569,38 @@
             background: rgba(59, 130, 246, 0.1);
         }
 
+        .sponsor-item {
+            position: relative;
+        }
+
+        .sponsor-item::after {
+            content: attr(data-contribution);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: rgba(10, 15, 30, 0.95);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid var(--accent-blue);
+            pointer-events: none;
+            z-index: 10;
+            box-shadow: 0 0 15px var(--accent-glow);
+            font-weight: 500;
+        }
+
+        .sponsor-item:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-10px);
+        }
+
         @media (max-width: 600px) {
             header h1 {
                 font-size: 2.5rem;
@@ -619,7 +651,8 @@
         <section class="profile-card">
             <div class="profile-info">
                 <h2>NCryptsion</h2>
-                <p>18 Years-Old Developer from the Philippines that is Driven by Noble Principles with a Passion for Security and Privacy.</p>
+                <p>18 Years-Old Developer from the Philippines that is Driven by Noble Principles with a Passion for
+                    Security and Privacy.</p>
                 <div class="social-links">
                     <a href="https://github.com/ncryptsion" class="social-icon" aria-label="Github" target="_blank">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -664,7 +697,8 @@
                     <article class="about-card">
                         <h4>Origin</h4>
                         <p>NCryptsion is primarily born out of a deep frustration with game cheats, scammers, black-hat
-                            hackers and organizations that fail to prioritize their customers or honor their
+                            hackers, psychopaths and organizations that fail to prioritize their customers or honor
+                            their
                             commitments. Beyond that, it serves as my personal platform to connect with like-minded
                             individuals, achieve my life goals, enhance my skills, and continuously learn and grow along
                             the way.</p>
@@ -867,7 +901,7 @@
                         <div class="stars">★★★★★</div>
                     </div>
 
-                      <div class="review-card">
+                    <div class="review-card">
                         <div class="review-header">
                             <div class="review-avatar"><img
                                     src="https://voidfile.vercel.app/api/render-image?u=https://cdn.discordapp.com/avatars/181493577791045632/d52da82a09e0636625bc3e6be694af71.png">
@@ -889,7 +923,7 @@
                     </div>
 
                     <!-- Copy -->
-                     <div class="review-card">
+                    <div class="review-card">
                         <div class="review-header">
                             <div class="review-avatar"><img
                                     src="https://voidfile.vercel.app/api/render-image?u=https://cdn.discordapp.com/avatars/859592220386525184/21d5d1ce35b798a1ea5a9e8480d22ebb.png">
@@ -1072,7 +1106,7 @@
                         <div class="stars">★★★★★</div>
                     </div>
 
-                      <div class="review-card">
+                    <div class="review-card">
                         <div class="review-header">
                             <div class="review-avatar"><img
                                     src="https://voidfile.vercel.app/api/render-image?u=https://cdn.discordapp.com/avatars/181493577791045632/d52da82a09e0636625bc3e6be694af71.png">
@@ -1105,7 +1139,7 @@
                             <div class="review-avatar">S</div>
                             <span class="review-name">sp3ctormarc</span>
                         </div>
-                        <p class="review-msg">crush q kase kaya bumili aq <3</p>
+                        <p class="review-msg">crush q kase kaya bumili aq <3< /p>
                                 <div class="stars">★★★★★</div>
                     </div>
 
@@ -1202,11 +1236,12 @@
                             </div>
                             <span class="review-name">Wendson</span>
                         </div>
-                        <p class="review-msg">Great for API development and integrations, delivered everything on point and well structured, always answered questions fast and communicated clearly.</p>
+                        <p class="review-msg">Great for API development and integrations, delivered everything on point
+                            and well structured, always answered questions fast and communicated clearly.</p>
                         <div class="stars">★★★★★</div>
                     </div>
 
-                      <div class="review-card">
+                    <div class="review-card">
                         <div class="review-header">
                             <div class="review-avatar"><img
                                     src="https://voidfile.vercel.app/api/render-image?u=https://cdn.discordapp.com/avatars/913408667020324894/18fa801c926f13b5a74ea5c8e8ab36f8.png">
@@ -1222,7 +1257,7 @@
                             <div class="review-avatar">S</div>
                             <span class="review-name">sp3ctormarc</span>
                         </div>
-                        <p class="review-msg">crush q kase kaya bumili aq <3</p>
+                        <p class="review-msg">crush q kase kaya bumili aq <3< /p>
                                 <div class="stars">★★★★★</div>
                     </div>
 
@@ -1330,21 +1365,73 @@
         <section class="sponsors-section">
             <div class="sponsors-grid">
                 <a href="https://vexhubhosting.dev/" style="text-decoration: none;">
-                    <div class="sponsor-item">
+                    <div class="sponsor-item" data-contribution="VPS & Database Sponsorship">
                         <div class="sponsor-avatar">
-                            <img src="https://voidfile.vercel.app/api/render-image?u=https://camo.githubusercontent.com/489cd533ec583f099999e1b68a1adc7acc8ba9a050982d0843976bae8e59ca19/68747470733a2f2f73362e696d6763646e2e6465762f5930545966762e706e67"
+                            <img src="https://voidfile.vercel.app/api/render-image?u=https://cdn.vexhub.dev/assets/files/newlogo.png"
                                 alt="Vexhub">
                         </div>
-                        <div class="sponsor-name">The Vexhub</div>
+                        <div class="sponsor-name">Vexhub Hosting</div>
+                        <div class="sponsor-label">Organization</div>
+                    </div>
+                </a>
+                <a href="https://stypz.me/" style="text-decoration: none;">
+                    <div class="sponsor-item" data-contribution="VPS Sponsorship">
+                        <div class="sponsor-avatar">
+                            <img src="https://voidfile.vercel.app/api/render-image?u=https://stypz.me/logo.png"
+                                alt="Stypz">
+                        </div>
+                        <div class="sponsor-name">Stypz Hosting</div>
                         <div class="sponsor-label">Organization</div>
                     </div>
                 </a>
 
-                <div class="sponsor-item">
+                <div class="sponsor-item" data-contribution="VPS, RDP Sponsorship & Donations">
                     <div class="sponsor-avatar">
-                        N
+                        <img src="https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/Xkbn8n5k/303.gif"
+                            alt="303">
                     </div>
-                    <div class="sponsor-name">NetworkBroker</div>
+                    <div class="sponsor-name">303</div>
+                    <div class="sponsor-label">Individual</div>
+                </div>
+
+                <div class="sponsor-item" data-contribution="VPS & RDP Sponsorship">
+                    <div class="sponsor-avatar">
+                        <img src="https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/xS9Y7F2d/double.png"
+                            alt="Double">
+                    </div>
+                    <div class="sponsor-name">Double</div>
+                    <div class="sponsor-label">Individual</div>
+                </div>
+
+                <div class="sponsor-item" data-contribution="AI Sponsorship and Many more">
+                    <div class="sponsor-avatar">
+                        <img src="https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/m5nTzVTm/nghialonton.gif"
+                            alt="Nghialonton">
+                    </div>
+                    <div class="sponsor-name">Nghialonton</div>
+                    <div class="sponsor-label">Individual</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-title" id="sponsors">Supporters</div>
+        <section class="sponsors-section">
+            <div class="sponsors-grid">
+                <div class="sponsor-item" data-contribution="The Oldest, and Most Trusted and Loyal Staff.">
+                    <div class="sponsor-avatar">
+                        <img src="https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/jkJdkTmv/goof.png"
+                            alt="Goof">
+                    </div>
+                    <div class="sponsor-name">Goof</div>
+                    <div class="sponsor-label">Individual</div>
+                </div>
+
+                <div class="sponsor-item" data-contribution="Greatest Staff Ever.">
+                    <div class="sponsor-avatar">
+                        <img src="https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/zh7q28mF/lms.png"
+                            alt="LMS">
+                    </div>
+                    <div class="sponsor-name">LMS</div>
                     <div class="sponsor-label">Individual</div>
                 </div>
             </div>
