@@ -625,6 +625,75 @@
                 font-size: 0.8rem;
             }
         }
+
+        .skills-section {
+            margin-bottom: 4rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .skills-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            width: 100%;
+        }
+
+        .skills-category {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .skills-category-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: left;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 1.2rem;
+            width: 100%;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.8rem 1.4rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-item img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+        }
+
+        .skill-item:hover {
+            border-color: var(--accent-blue);
+            color: var(--text-primary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--accent-glow);
+            background: rgba(16, 26, 48, 0.9);
+        }
     </style>
 </head>
 
@@ -633,7 +702,7 @@
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="https://www.firstdecree.org/handbook#Sponsors.md">Sponsors</a></li>
             <li><a href="/privacy-policy">Privacy Policy</a></li>
         </ul>
     </nav>
@@ -653,6 +722,14 @@
                 <h2>NCryptsion</h2>
                 <p>18 Years-Old Developer from the Philippines that is Driven by Noble Principles with a Passion for
                     Security and Privacy.</p>
+                <a href="https://firstdecree.org/" style="text-decoration: none;">
+                    <div class="organization"
+                        style="display: flex; align-items: center; gap: 8px; margin-top: 15px; margin-bottom: 20px; background: rgba(255, 255, 255, 0.03); padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08); width: fit-content;">
+                        <img src="https://voidfile.vercel.app/api/render-image?u=https://www.firstdecree.org/assets/img/logo.png"
+                            alt="The First Decree" style="width: 24px; height: 24px; object-fit: contain;">
+                        <span style="font-size: 0.9rem; font-weight: 500; color: inherit;">First Decree</span>
+                    </div>
+                </a>
                 <div class="social-links">
                     <a href="https://github.com/ncryptsion" class="social-icon" aria-label="Github" target="_blank">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -666,7 +743,7 @@
                                 d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                         </svg>
                     </a>
-                    <a href="https://dsc.gg/ncryptsion" class="social-icon" aria-label="Discord" target="_blank">
+                    <a href="https://dsc.gg/firstdecree" class="social-icon" aria-label="Discord" target="_blank">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028 14.09 14.09 0 001.226-1.994.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.068 0a.074.074 0 01.078.01c.118.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
@@ -685,7 +762,150 @@
                 </div>
             </div>
             <div class="profile-img-container">
-                <img src="https://avatars.githubusercontent.com/u/251598277?v=4" alt="NCryptsion">
+                <img src="https://voidfile.vercel.app/api/render-image?u=https://avatars.githubusercontent.com/u/251598277?v=4"
+                    alt="NCryptsion">
+            </div>
+        </section>
+
+        <div class="section-title" id="skills">Skills & Tools</div>
+        <section class="skills-section">
+            <div class="skills-card">
+                <div class="skills-category">
+                    <h3 class="skills-category-title">Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                                alt="Python">
+                            Python
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                                alt="C/C++">
+                            C/C++
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                                alt="C#">
+                            C#
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg"
+                                alt="Lua">
+                            Lua
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                                alt="HTML">
+                            HTML
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                                alt="CSS">
+                            CSS
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                                alt="Javascript">
+                            Javascript
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nim/nim-original.svg"
+                                alt="Nim">
+                            Nim
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 class="skills-category-title">Technologies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                                alt="Node.JS">
+                            Node.JS
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+                                alt="MongoDB">
+                            MongoDB
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                                alt="MySQL">
+                            MySQL
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                                alt="PostgreSQL">
+                            PostgreSQL
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                                alt="Docker">
+                            Docker
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                                alt="Git">
+                            Git
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg"
+                                alt="Vercel" style="filter: invert(1);">
+                            Vercel
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+                                alt="Linux">
+                            Linux
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 class="skills-category-title">Services</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <svg style="width: 22px; height: 22px; color: var(--text-primary);" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                            Website Scraping
+                        </div>
+                        <div class="skill-item">
+                            <svg style="width: 22px; height: 22px; color: var(--text-primary);" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Discord Bot Development
+                        </div>
+                        <div class="skill-item">
+                            <svg style="width: 22px; height: 22px; color: var(--text-primary);" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Website Development
+                        </div>
+                        <div class="skill-item">
+                            <svg style="width: 22px; height: 22px; color: var(--text-primary);" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                            Cybersecurity Tools Development
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    style="width: 100%; text-align: center; margin-top: 0.5rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; font-style: italic;">
+                        Inquire for other services
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -1357,72 +1577,6 @@
                         <p class="review-msg">Friendly and Professional freelancer. Recommended!</p>
                         <div class="stars">★★★★★</div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-title" id="sponsors">Sponsors</div>
-        <section class="sponsors-section">
-            <div class="sponsors-grid">
-                <a href="https://vexhubhosting.dev/" style="text-decoration: none;">
-                    <div class="sponsor-item" data-contribution="VPS & Database Sponsorship">
-                        <div class="sponsor-avatar">
-                            <img src="https://voidfile.vercel.app/api/render-image?u=https://cdn.vexhub.dev/assets/files/newlogo.png"
-                                alt="Vexhub">
-                        </div>
-                        <div class="sponsor-name">Vexhub Hosting</div>
-                        <div class="sponsor-label">Organization</div>
-                    </div>
-                </a>
-
-                <div class="sponsor-item" data-contribution="VPS, RDP Sponsorship & Donations">
-                    <div class="sponsor-avatar">
-                        <img src="https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/Xkbn8n5k/303.gif"
-                            alt="303">
-                    </div>
-                    <div class="sponsor-name">303</div>
-                    <div class="sponsor-label">Individual</div>
-                </div>
-
-                <div class="sponsor-item" data-contribution="VPS & RDP Sponsorship">
-                    <div class="sponsor-avatar">
-                        <img src="https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/xS9Y7F2d/double.png"
-                            alt="Double">
-                    </div>
-                    <div class="sponsor-name">Double</div>
-                    <div class="sponsor-label">Individual</div>
-                </div>
-
-                <div class="sponsor-item" data-contribution="AI Sponsorship and Many more">
-                    <div class="sponsor-avatar">
-                        <img src="https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/m5nTzVTm/nghialonton.gif"
-                            alt="Nghialonton">
-                    </div>
-                    <div class="sponsor-name">Nghialonton</div>
-                    <div class="sponsor-label">Individual</div>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-title" id="sponsors">Supporters</div>
-        <section class="sponsors-section">
-            <div class="sponsors-grid">
-                <div class="sponsor-item" data-contribution="The Oldest, and Most Trusted and Loyal Staff">
-                    <div class="sponsor-avatar">
-                        <img src="https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/jkJdkTmv/goof.png"
-                            alt="Goof">
-                    </div>
-                    <div class="sponsor-name">Goof</div>
-                    <div class="sponsor-label">Individual</div>
-                </div>
-
-                <div class="sponsor-item" data-contribution="Greatest Staff Ever">
-                    <div class="sponsor-avatar">
-                        <img src="https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/zh7q28mF/lms.png"
-                            alt="LMS">
-                    </div>
-                    <div class="sponsor-name">LMS</div>
-                    <div class="sponsor-label">Individual</div>
                 </div>
             </div>
         </section>
