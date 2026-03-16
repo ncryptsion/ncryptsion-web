@@ -1,0 +1,6 @@
+.vercel
+node_modules
+pnpm-lock.yaml
+vercel-prod
+.archived
+dl_assets.py

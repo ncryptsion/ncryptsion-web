@@ -1,0 +1,3 @@
+I volunteer as a Penetration Tester for BoSINT, a platform that provides OSINT researchers, investigators, and everyday users with access to advanced intelligence tools from any device. BoSINT integrates proprietary algorithms, undetectable crawlers, and widely used open-source tools into a single platform, generating highly accurate and AI-driven intelligence reports.
+
+In my role, I am responsible for identifying bugs, system errors and security vulnerabilities within the platform. I conduct testing to assess the security posture of the service and report findings to the development team to ensure timely remediation and continuous improvement of the platform security and reliability.

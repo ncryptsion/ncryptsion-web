@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>NCryptsion</title>
+    <link rel="canonical" href="https://ncryptsion.vercel.app/">
+    <meta property="og:url" content="https://ncryptsion.vercel.app/">
+    <meta property="og:description"
+        content="I'm an 18-year-old programmer from the Philippines. I build secure, privacy-first solutions that listen to your needs and put you first. Your data is secured and your priorities always come first.">
+    <meta property="og:title" content="NCryptsion">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="description"
+        content="I'm an 18-year-old programmer from the Philippines. I build secure, privacy-first solutions that listen to your needs and put you first. Your data is secured and your priorities always come first.">
+    <link rel="icon" type="image/png" sizes="500x500" href="/img/logo.png">
+    <script src="https://kawiso.vercel.app/analytics.js" data-id="snGdEs-51PAo6-bmttA-FmHEIW"></script>
+    <link href="/assets/fonts/fonts.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/assets/devicon/devicon.min.css">
+    <style>
+        :root {
+            --bg-main: #0a0a0c;
+            --bg-sec: #13141a;
+            --accent: #00e5ff;
+            --accent-glow: rgba(0, 229, 255, 0.4);
+            --text-main: #e0e0e0;
+            --text-muted: #8b8e99;
+            --font-display: 'Rajdhani', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --box-size: 160px;
+            --main-color: #00e5ff;
+            --path-width: 2px;
+            --anime-time: 4s
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            overflow: hidden;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 10% 20%, rgba(0, 229, 255, 0.03), transparent 30%), radial-gradient(circle at 90% 80%, rgba(0, 229, 255, 0.05), transparent 40%), linear-gradient(rgba(10, 10, 12, 0.95), rgba(10, 10, 12, 0.95)), repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.02) 2px, rgba(255, 255, 255, 0.02) 4px)
+        }
+
+        .scroll-container {
+            height: 100vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-padding-top: 50px;
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            display: none
+        }
+
+        .page-section {
+            min-height: 100vh;
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 40px;
+            position: relative
+        }
+
+        .navbar {
+            height: 50px;
+            width: 100%;
+            background: rgba(19, 20, 26, 0.85);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 200;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            padding: 0 20px;
+        }
+
+        .nav-hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            padding: 5px;
+            position: absolute;
+            right: 20px;
+        }
+
+        .nav-hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-muted);
+            transition: all .3s ease;
+        }
+
+        .nav-hamburger.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+            background: var(--accent);
+        }
+
+        .nav-hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-hamburger.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+            background: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all .3s ease;
+            position: relative;
+            padding: 5px 0
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            text-shadow: 0 0 8px var(--accent-glow)
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: width .3s ease;
+            box-shadow: 0 0 10px var(--accent)
+        }
+
+        .nav-links a:hover::after {
+            width: 100%
+        }
+
+        .nav-hire-btn {
+            position: absolute;
+            right: 20px;
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 7px 18px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+        }
+
+        .nav-hire-btn:hover {
+            background: var(--accent);
+            color: var(--bg-main);
+            box-shadow: 0 0 18px var(--accent-glow);
+        }
+
+        .nav-dropdown {
+            display: none;
+            position: fixed;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            background: rgba(13, 14, 19, 0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+            flex-direction: column;
+            z-index: 199;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.35s ease;
+        }
+
+        .nav-dropdown.open {
+            display: flex;
+            max-height: 400px;
+        }
+
+        .nav-dropdown a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 16px 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all .2s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-dropdown a::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            transition: all .2s ease;
+        }
+
+        .nav-dropdown a:hover {
+            color: var(--accent);
+            background: rgba(0, 229, 255, 0.05);
+            padding-left: 30px;
+        }
+
+        .nav-dropdown a:hover::before {
+            background: var(--accent);
+            box-shadow: 0 0 6px var(--accent);
+        }
+
+        .section-header {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 15px
+        }
+
+        .section-header::before {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 35px;
+            background: var(--accent);
+            box-shadow: 0 0 10px var(--accent-glow)
+        }
+
+        .bg-text {
+            position: fixed;
+            bottom: -5vh;
+            left: -2vw;
+            font-family: var(--font-display);
+            font-size: 20vw;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.02);
+            pointer-events: none;
+            z-index: -1;
+            white-space: nowrap;
+            user-select: none
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --box-size: 120px;
+            }
+
+            body {
+                overflow: hidden;
+                overflow-x: hidden;
+            }
+
+            .scroll-container {
+                scroll-snap-type: none;
+                height: 100dvh;
+                overflow-x: hidden;
+            }
+
+            .nav-hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-hire-btn {
+                right: auto;
+                left: 20px;
+            }
+
+            .navbar {
+                justify-content: flex-start;
+                padding-left: 20px;
+            }
+
+            .page-section {
+                padding: 80px 16px 90px 16px;
+                scroll-snap-align: none;
+                min-height: auto;
+                align-items: flex-start;
+                box-sizing: border-box;
+                overflow-x: hidden;
+            }
+
+            .section-layout {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+
+            .section-header {
+                font-size: 1.6rem;
+            }
+
+            .bg-text {
+                display: none;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .privacy-layout {
+                grid-template-columns: 1fr !important;
+            }
+
+            .privacy-toc {
+                position: static !important;
+                order: -1;
+            }
+            .privacy-toc > div {
+                position: static !important;
+                width: 100% !important;
+            }
+        }
+
+        .privacy-toc a:hover {
+            color: var(--accent) !important;
+            text-shadow: 0 0 5px var(--accent-glow);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-text">NCRYPTSION</div>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="/#intro">Introduction</a>
+            <a href="/#projects">Projects</a>
+            <a href="/#skills">Skills</a>
+            <a href="/#testimonials">Testimonials</a>
+            <a href="/#experience">Experience</a>
+            <a href="/#about">About</a>
+            <a href="/#contact">Contact</a>
+        </div>
+        <a href="/freelance" class="nav-hire-btn">Hire Me</a>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="nav-dropdown" id="navDropdown">
+        <a href="/#intro" class="nav-dd-link"><span>Introduction</span></a>
+        <a href="/#projects" class="nav-dd-link"><span>Projects</span></a>
+        <a href="/#skills" class="nav-dd-link"><span>Skills</span></a>
+        <a href="/#testimonials" class="nav-dd-link"><span>Testimonials</span></a>
+        <a href="/#experience" class="nav-dd-link"><span>Experience</span></a>
+        <a href="/#about" class="nav-dd-link"><span>About</span></a>
+        <a href="/#contact" class="nav-dd-link"><span>Contact</span></a>
+        <a href="mailto:ncryptsion@proton.me" class="nav-dd-link" style="color: var(--accent);"><span>✉ Hire
+                Me</span></a>
+    </div>
+
+    <main class="scroll-container" id="scrollContainer" style="overflow-y: auto; height: 100vh;">
+        <section class="page-section"
+            style="padding-top: 120px; padding-bottom: 60px; align-items: flex-start; min-height: auto;">
+            <div class="section-layout privacy-layout"
+                style="display: grid; grid-template-columns: 1fr 300px; gap: 40px; max-width: 1200px; padding: 0 20px; margin: 0 auto; width: 100%;">
+                <div class="privacy-content"
+                    style="background: rgba(19, 20, 26, 0.6); border: 1px solid rgba(255, 255, 255, 0.05); border-left: 2px solid var(--accent); padding: 40px; backdrop-filter: blur(5px);">
+                    <h1 class="section-header" style="margin-bottom: 30px; font-size: 2.2rem;">Privacy Policy</h1>
+
+                    <div style="color: var(--text-muted); line-height: 1.8; font-size: 1.05rem;">
+                        <p style="margin-bottom: 25px;">Last updated: March 16, 2026</p>
+
+                        <h3 id="introduction"
+                            style="color: #fff; font-family: var(--font-display); font-size: 1.5rem; text-transform: uppercase; margin: 30px 0 15px;">
+                            1. Introduction</h3>
+                        <p style="margin-bottom: 20px;">I respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how I look after your personal data when you visit my website and tell you about your privacy rights and how the law protects you.</p>
+
+                        <h3 id="information-collection"
+                            style="color: #fff; font-family: var(--font-display); font-size: 1.5rem; text-transform: uppercase; margin: 30px 0 15px;">
+                            2. Information I Collect</h3>
+                        <p style="margin-bottom: 20px;">I do not collect any information from you at all. But I do use <a href="https://kawiso.vercel.app/"
+                                style="text-decoration: none; color: silver;">Kawiso</a> for analytics; however,
+                    all collected information is fully anonymized and generalized to protect user privacy making it impossible to pinpoint certain users.</p>
+
+                        <h3 id="cookies"
+                            style="color: #fff; font-family: var(--font-display); font-size: 1.5rem; text-transform: uppercase; margin: 30px 0 15px;">
+                            3. Cookies</h3>
+                        <p style="margin-bottom: 20px;">The website will never use cookies or employ any cookies that track your activity.
+                        </p>
+
+                        <h3 id="sharing-information"
+                            style="color: #fff; font-family: var(--font-display); font-size: 1.5rem; text-transform: uppercase; margin: 30px 0 15px;">
+                            4. Sharing Your Information</h3>
+                        <p style="margin-bottom: 20px;">I guarantee that I will never sell or share any information with external parties or anyone.</p>
+
+                        <h3 id="contact"
+                            style="color: #fff; font-family: var(--font-display); font-size: 1.5rem; text-transform: uppercase; margin: 30px 0 15px;">
+                            5. Contact</h3>
+                        <p style="margin-bottom: 20px;">If you have any questions about this privacy policy or privacy practice, please contact me. 
+                    <a href="http://localhost:8080/#contact" style="text-decoration: none;color: silver;"><u>Click me</u></a>.</p>
+                    </div>
+                </div>
+
+                <div class="privacy-toc" style="align-self: start;">
+                    <div
+                        style="position: fixed; top: 120px; width: 300px; background: rgba(19, 20, 26, 0.6); border: 1px solid rgba(255, 255, 255, 0.05); border-left: 2px solid var(--accent); padding: 40px; backdrop-filter: blur(5px);">
+                        <h3
+                            style="color: #fff; font-family: var(--font-display); font-size: 1.3rem; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px;">
+                            Table of Contents</h3>
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                            <li><a href="#introduction"
+                                    style="color: var(--text-muted); text-decoration: none; transition: color 0.2s ease;">1.
+                                    Introduction</a></li>
+                            <li><a href="#information-collection"
+                                    style="color: var(--text-muted); text-decoration: none; transition: color 0.2s ease;">2.
+                                    Information I Collect</a></li>
+                            <li><a href="#cookies"
+                                    style="color: var(--text-muted); text-decoration: none; transition: color 0.2s ease;">3.
+                                    Cookies</a></li>
+                            <li><a href="#sharing-information"
+                                    style="color: var(--text-muted); text-decoration: none; transition: color 0.2s ease;">4.
+                                    Sharing Your Information</a></li>
+                            <li><a href="#contact"
+                                    style="color: var(--text-muted); text-decoration: none; transition: color 0.2s ease;">5.
+                                    Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer
+            style="width: 100%; padding: 40px 20px; text-align: center; color: var(--text-muted); font-size: 0.95rem; border-top: 1px solid rgba(255,255,255,0.05); scroll-snap-align: end; margin-top: auto;">
+            <div style="font-family: var(--font-display); letter-spacing: 1px;">&copy; 2026 NCryptsion. All rights
+                reserved.</div>
+            <div style="margin-top: 10px;">
+                <a href="/privacy-policy"
+                    style="color: var(--accent); text-decoration: none; font-weight: 500; transition: all 0.3s ease;">Privacy
+                    Policy</a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const ham = document.getElementById("navHamburger")
+            const dd = document.getElementById("navDropdown")
+            if (ham && dd) {
+                ham.addEventListener("click", () => {
+                    ham.classList.toggle("open")
+                    dd.classList.toggle("open")
+                })
+                document.querySelectorAll(".nav-dd-link").forEach(a => {
+                    a.addEventListener("click", () => {
+                        ham.classList.remove("open")
+                        dd.classList.remove("open")
+                    })
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>

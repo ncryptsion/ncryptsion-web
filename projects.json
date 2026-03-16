@@ -1,0 +1,32 @@
+[
+    {
+        "logoLink": "/img/projects-logo/blackcord.png",
+        "screenshots": [
+            "https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/DgMZGwtv/blackcord-1.png",
+            "https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/N6JFszhM/blackcord-2.png"
+        ],
+        "name": "Blackcord",
+        "description": "Blackcord is a website dedicated for reporting malicious Discord users and maintaining a blacklist, with the broader mission of making Discord a safer place.",
+        "link": "https://blackcord.vercel.app"
+    },
+    {
+        "logoLink": "/img/projects-logo/switz.png",
+        "screenshots": [
+            "https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/v7hVZ7h/switz-1.png"
+        ],
+        "name": "Switz",
+        "description": "List of \"everything\" that respect your privacy.",
+        "link": "https://github.com/firstdecree/switz"
+    },
+    {
+        "name": "ShadowNetwork",
+        "logoLink": "/img/projects-logo/shadownetwork.png",
+        "screenshots": [
+            "https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/WNH4gm7y/sn-1.png",
+            "https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/yBYW43Bx/sn-2.png",
+            "https://voidfile.vercel.app/api/render-image?u=https://i.ibb.co/zWygvLT8/sn-3.png"
+        ],
+        "description": "Store your contacts securely and indefinitely with ease and convenience.",
+        "link": "https://github.com/firstdecree/shadownetwork"
+    }
+]
