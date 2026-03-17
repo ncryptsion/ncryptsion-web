@@ -479,6 +479,7 @@
     </main>
 
     <script>
+        // Main
         document.addEventListener("DOMContentLoaded", () => {
             const ham = document.getElementById("navHamburger")
             const dd = document.getElementById("navDropdown")
@@ -487,6 +488,7 @@
                     ham.classList.toggle("open")
                     dd.classList.toggle("open")
                 })
+                
                 document.querySelectorAll(".nav-dd-link").forEach(a => {
                     a.addEventListener("click", () => {
                         ham.classList.remove("open")

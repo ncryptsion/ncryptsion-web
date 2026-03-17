@@ -1564,7 +1564,6 @@
                     experiences, the roles held and volunteer contributions I have made.</p>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; width: 100%;">
 
-                    <!-- Experience Column -->
                     <div>
                         <div
                             style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
@@ -1611,7 +1610,6 @@
                         </div>
                     </div>
 
-                    <!-- Volunteering Column -->
                     <div>
                         <div
                             style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
@@ -1669,7 +1667,7 @@
                 <h2 class="section-header" style="margin-bottom: 20px;">About Me</h2>
 
                 <div class="about-me-carousel" style="position: relative; overflow: hidden;">
-                    <!-- About Slide -->
+
                     <div class="about-slide active" data-slide="0"
                         style="min-height: 255px; background: rgba(19, 20, 26, 0.6); border: 1px solid rgba(255, 255, 255, 0.05); border-left: 2px solid var(--accent); padding: 30px; line-height: 1.8; color: var(--text-muted); font-size: 1.05rem; backdrop-filter: blur(5px);">
                         <h3
@@ -1682,7 +1680,6 @@
                             continuously learn and grow along the way.</p>
                     </div>
 
-                    <!-- Mission Slide -->
                     <div class="about-slide" data-slide="1"
                         style="display: none; min-height: 255px; background: rgba(19, 20, 26, 0.6); border: 1px solid rgba(255, 255, 255, 0.05); border-left: 2px solid var(--accent); padding: 30px; line-height: 1.8; color: var(--text-muted); font-size: 1.05rem; backdrop-filter: blur(5px);">
                         <h3
@@ -1693,8 +1690,6 @@
                             prioritized. I'm also passionate about freemium models and creating budget-friendly
                             solutions that make quality accessible to all.</p>
                     </div>
-
-                    <!-- Organization Slide -->
                     <div class="about-slide" data-slide="2"
                         style="display: none; min-height: 255px; background: rgba(19, 20, 26, 0.6); border: 1px solid rgba(255, 255, 255, 0.05); border-left: 2px solid var(--accent); padding: 30px; line-height: 1.8; color: var(--text-muted); font-size: 1.05rem; backdrop-filter: blur(5px);">
                         <h3
@@ -1767,7 +1762,6 @@
         </footer>
     </main>
 
-    <!-- Experience Detail Modal -->
     <div class="exp-modal-overlay" id="expModalOverlay">
         <div class="exp-modal" id="expModal">
             <div class="exp-modal-corner tl"></div>
@@ -1961,7 +1955,7 @@
                 dd.classList.remove("open")
             })
         })
-        // Experience card modal
+
         const overlay = document.getElementById("expModalOverlay")
         const modalTitle = document.getElementById("expModalTitle")
         const modalSubtitle = document.getElementById("expModalSubtitle")
@@ -2008,7 +2002,6 @@
         overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open") })
         document.addEventListener("keydown", (e) => { if (e.key === "Escape") overlay.classList.remove("open") })
 
-        // About section carousel
         const aboutSlides = document.querySelectorAll('.about-slide');
         const aboutNextBtn = document.getElementById('aboutNextBtn');
         const aboutBackBtn = document.getElementById('aboutBackBtn');
@@ -2019,7 +2012,7 @@
                 if (index === currentAboutSlide) {
                     slide.style.display = 'block';
                     slide.style.animation = 'none';
-                    slide.offsetHeight; // trigger reflow
+                    slide.offsetHeight;
                     slide.style.animation = 'modalIn 0.3s ease forwards';
                 } else {
                     slide.style.display = 'none';

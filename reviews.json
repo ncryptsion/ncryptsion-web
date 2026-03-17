@@ -1,6 +1,13 @@
 [
     {
         "level": "top",
+        "profilePicture": "/img/testimonials-pfp/kuromi.png",
+        "name": "Kuromi",
+        "review": "Someone who can be trusted with significant sums of money and high-quality hacking tools. Vouch!",
+        "stars": "★★★★★"
+    },
+    {
+        "level": "top",
         "profilePicture": "/img/testimonials-pfp/goof.png",
         "name": "Goof",
         "review": "I recommend him a lot, very trusted Discord server and developer.",

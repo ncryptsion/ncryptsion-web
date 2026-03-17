@@ -34,11 +34,13 @@ fastify.get("/api/projects", (req, res) => {
 })
 
 fastify.get("/api/experience/:slug", (req, res) => {
+    // Variables
     const fs = require("fs")
     const slug = req.params.slug.replace(/[^a-z0-9\-_]/gi, "")
     const filePath = path.join(__dirname, "database", "experiences", `${slug}.md`)
-
     const content = fs.readFileSync(filePath, "utf8")
+    
+    // Core
     res.header("Content-Type", "text/plain; charset=utf-8")
     res.send(content)
 })
